@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://6sudr38v18t2"]
+[gd_scene load_steps=3 format=3 uid="uid://6sudr38v18t2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lhd8w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2g1kd"]
+size = Vector2(552, 20)
 
 [node name="Node2D" type="Node2D"]
 
@@ -13,3 +16,10 @@ shape = SubResource("RectangleShape2D_lhd8w")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
 root_node = NodePath("../..")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 30)
+shape = SubResource("RectangleShape2D_2g1kd")
+debug_color = Color(0, 0.640735, 0.345352, 0.42)
